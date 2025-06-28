@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import HomePage from './components/HomePage';
+import DonorPage from './components/DonorPage';
+import VolunteerLogin from './components/VolunteerLogin';
+import VolunteerPage from './components/VolunteerPage';
+import AdminLogin from './components/AdminLogin';
+import AdminDashboard from './components/AdminDashboard';
+import FundraiserPage from './components/FundraiserPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/donor" element={<DonorPage />} />
+          <Route path="/volunteer-login" element={<VolunteerLogin />} />
+          <Route path="/volunteer" element={<VolunteerPage />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/fundraiser" element={<FundraiserPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
