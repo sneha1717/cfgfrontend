@@ -129,9 +129,13 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <footer className="footer">
         <p>&copy; 2024 Food Hunger Relief. Making a difference, one meal at a time.</p>
+        <div className="footer-contact">
+          <p>Contact us: <a href="mailto:support@foodhungerrelief.org">support@foodhungerrelief.org</a></p>
+          <p>Toll Free: <a href="tel:1800123456">1800-123-456</a></p>
+        </div>
       </footer>
     </div>
   );
 };
 
-export default HomePage; 
+export default HomePage;
