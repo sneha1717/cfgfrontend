@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
+
 
 const HomePage: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
+
   const handleRoleSelect = (role: string) => {
     setIsDropdownOpen(false);
-    
-    // Redirect based on role
     switch (role) {
       case 'donor':
         navigate('/donor');
@@ -34,6 +34,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="homepage">
+      
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-brand">
