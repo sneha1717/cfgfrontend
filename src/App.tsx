@@ -8,11 +8,13 @@ import VolunteerPage from './components/VolunteerPage';
 import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
 import FundraiserPage from './components/FundraiserPage';
+import GoogleTranslateWidget from './components/GoogleTranslateWidget';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <GoogleTranslateWidget />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/donor" element={<DonorPage />} />
